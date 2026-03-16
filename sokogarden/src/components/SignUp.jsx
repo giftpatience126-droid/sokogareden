@@ -14,7 +14,7 @@ const SignUp = () => {
   const[success,setSuccess]=useState("")
   const[error,setError]=useState("")
 
-  // function to send otu data to the server
+  // function to send out data to the server
 
   const submit=async(e)=>{
 
@@ -64,7 +64,7 @@ const SignUp = () => {
         <h1>Sign Up</h1>
 
         <form action=""onSubmit={submit}>
-          {username}
+          
 
 
           <p className='text-warning'>{loading}</p>
@@ -74,13 +74,13 @@ const SignUp = () => {
         <input type="text" placeholder='Enter your username' className='form-control' required value={username} onChange={(e)=>setUsername(e.target.value)}/>
       
         <br />
-        {email}
+       
         <input type="email" placeholder='Enter your email' className='form-control' required value={email} onChange={(e)=>setEmail(e.target.value)}/>
         <br />
-        {phone}
+        
         <input type="tel" placeholder='Enter your phone' className='form-control' required value={phone} onChange={(e)=>setPhone(e.target.value)}/>
         <br />
-        {password}
+        
         <input type="password" placeholder='Enter your password' className='form-control' required value={password} onChange={(e)=>setPassword(e.target.value)}/>
         <br /> 
 

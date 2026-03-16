@@ -26,7 +26,7 @@ function App() {
         <Link to='/signup' className='btn btn-dark m-2 mt-3'>Sign Up</Link>
         
         <Link to='/signin'className='btn btn-dark m-2 mt-3'>Sign In</Link>
-        <Link to='/getproducts' className='btn btn-dark m-2 mt-3'>Get Products</Link>
+        <Link to='/' className='btn btn-dark m-2 mt-3'>Get Products</Link>
         <Link to='addproducts' className='btn btn-dark m-2 mt-3'>Add Products</Link>
       </nav>
 
@@ -34,7 +34,7 @@ function App() {
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/signin' element={<SignIn/>} />
         <Route path='/addproducts' element={<AddProducts/>} />
-        <Route path='/getproducts' element={<GetProducts/>} />
+        <Route path='/' element={<GetProducts/>} />
         <Route path='/mpesapayment' element={<MpesaPayment/>} />
       </Routes>
 
