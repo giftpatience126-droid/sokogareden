@@ -25,6 +25,17 @@
   
 }
 
+
+.product_img.hover{
+  width:100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.2);
+  transition: 2.5s;
+ 
+}
+
+
 .App-link {
   color: #61dafb;
 }

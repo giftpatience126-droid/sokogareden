@@ -46,7 +46,7 @@ const SignUp = () => {
         setPassword("")
         setPhone("")
 
-
+        
            
     } catch (error) {
       setLoading("")
