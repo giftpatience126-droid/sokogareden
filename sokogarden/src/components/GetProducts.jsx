@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
 
 const GetProducts = () => {
 
@@ -12,6 +14,7 @@ const GetProducts = () => {
   const[loading,setLoading]=useState("")
   const[error,setError]=useState("")
   const[products,setProducts]=useState([])
+  const navigate=useNavigate()
 
 
 
@@ -69,7 +72,7 @@ const GetProducts = () => {
         <div className='card shadow mt-4'>
 
 
-          <img src={img_url + product.product_photo} alt="skin care" className='product_img '/>
+          <img src={img_url + product.product_photo} alt="skin care" className='product_img  img'/>
           <div className='card-body'>
 
             <h3 className='text-success'>{product.product_name} </h3>
@@ -77,7 +80,7 @@ const GetProducts = () => {
             <b className='text-warning'>{product.product_cost}</b>
 
             <br />
-            <input type="button" value='Make Payments' className='btn btn-info' />
+            <input type="button" value='Purchase now' className='btn btn-info' onClick={()=>navigate("/mpesa", {state:{product}})} />
 
 
           </div>

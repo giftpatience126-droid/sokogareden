@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 import axios from 'axios'
 const SignUp = () => {
 
@@ -13,6 +13,7 @@ const SignUp = () => {
   const[loading,setLoading]=useState("")
   const[success,setSuccess]=useState("")
   const[error,setError]=useState("")
+  const navigate=useNavigate();
 
   // function to send out data to the server
 
@@ -39,6 +40,11 @@ const SignUp = () => {
         setLoading("")
 
         setSuccess(response.data.message)
+
+         setTimeout(()=>{
+
+            navigate("/");
+          },1000)
 
         // reset your form
         setUsername("")
